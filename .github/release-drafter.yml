@@ -25,6 +25,7 @@ categories:
       - "build"
 exclude-labels:
   - "skip-changelog"
+prerelease: true
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 template: |
   ## Changes
