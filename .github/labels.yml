@@ -49,9 +49,6 @@
 - name: style
   description: Changes that do not affect the meaning of the code
   color: ffc6df
-- name: task
-  description:
-  color: d88c70
 - name: testing
   description: Adding missing tests or correcting existing tests
   color: 79e57f
