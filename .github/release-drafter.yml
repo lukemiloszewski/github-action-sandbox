@@ -25,6 +25,7 @@ categories:
       - "build"
 exclude-labels:
   - "skip-changelog"
+prerelease: true
 template: |
   ## Changes
   $CHANGES
