@@ -26,7 +26,7 @@ categories:
 exclude-labels:
   - "skip-changelog"
 prerelease: true
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE #$NUMBER (@$AUTHOR)'
 template: |
   ## Changes
   $CHANGES
