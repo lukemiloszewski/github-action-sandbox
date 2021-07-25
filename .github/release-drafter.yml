@@ -1,5 +1,21 @@
+version-template: "v$MAJOR.$MINOR.$PATCH"
+version-resolver:
+  major:
+    labels:
+      - 'breaking'
+  minor:
+    labels:
+      - 'feature'
+  patch:
+    labels:
+      - 'bug'
+  default: patch
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+template: |
+  # What's Changed
+  $CHANGES
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
@@ -63,11 +79,9 @@ autolabeler:
   - label: 'build'
     branch:
       - '/build\/.+/'
+  - label: 'release'
+    branch:
+      - '/release\/.+/'
 exclude-labels:
   - "skip-changelog"
   - "release"
-prerelease: true
-change-template: '- $TITLE #$NUMBER (@$AUTHOR)'
-template: |
-  # What's Changed
-  $CHANGES
