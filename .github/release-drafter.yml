@@ -47,7 +47,7 @@ autolabeler:
       - '/breaking\/.+/'
   - label: 'feature'
     branch:
-      - 'feature\/.+/'
+      - '/feature\/.+/'
   - label: 'removal'
     branch:
       - '/removal\/.+/'
