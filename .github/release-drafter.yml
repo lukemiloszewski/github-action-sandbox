@@ -10,8 +10,8 @@ version-resolver:
     labels:
       - 'bug'
   default: patch
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
 change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
 template: |
   # What's Changed
@@ -47,7 +47,7 @@ autolabeler:
       - '/breaking\/.+/'
   - label: 'feature'
     branch:
-      - '/feature\/.+/'
+      - 'feature\/.+/'
   - label: 'removal'
     branch:
       - '/removal\/.+/'
