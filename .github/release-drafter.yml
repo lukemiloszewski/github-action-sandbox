@@ -1,10 +1,10 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
+name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
   - title: ":rocket: Features"
-    label: "enhancement"
+    label: "feature"
   - title: ":fire: Removals and Deprecations"
     label: "removal"
   - title: ":beetle: Fixes"
@@ -25,10 +25,49 @@ categories:
     labels:
       - "dependencies"
       - "build"
+autolabeler:
+  - label: 'breaking'
+    branch:
+      - '/breaking\/.+/'
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/'
+  - label: 'removal'
+    branch:
+      - '/removal\/.+/'
+  - label: 'bug'
+    branch:
+      - '/bug\/.+/'
+      - '/fix\/.+/'
+  - label: 'performance'
+    branch:
+      - '/performance\/.+/'
+  - label: 'testing'
+    branch:
+      - '/testing\/.+/'
+  - label: 'ci'
+    branch:
+      - '/ci\/.+/'
+  - label: 'documentation'
+    branch:
+      - '/documentation\/.+/'
+  - label: 'refactoring'
+    branch:
+      - '/refactoring\/.+/'
+  - label: 'style'
+    branch:
+      - '/style\/.+/'
+  - label: 'dependencies'
+    branch:
+      - '/dependencies\/.+/'
+  - label: 'build'
+    branch:
+      - '/build\/.+/'
 exclude-labels:
   - "skip-changelog"
+  - "release"
 prerelease: true
 change-template: '- $TITLE #$NUMBER (@$AUTHOR)'
 template: |
-  ## Changes
+  # What's Changed
   $CHANGES
